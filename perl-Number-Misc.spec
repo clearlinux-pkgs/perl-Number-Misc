@@ -4,12 +4,13 @@
 #
 Name     : perl-Number-Misc
 Version  : 1.2
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Summary  : 'Number::Misc - handy utilities for numbers'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Number-Misc-license = %{version}-%{release}
 Requires: perl-Number-Misc-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
@@ -35,6 +36,14 @@ Requires: perl-Number-Misc = %{version}-%{release}
 
 %description dev
 dev components for the perl-Number-Misc package.
+
+
+%package license
+Summary: license components for the perl-Number-Misc package.
+Group: Default
+
+%description license
+license components for the perl-Number-Misc package.
 
 
 %package perl
@@ -72,6 +81,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Number-Misc
+cp %{_builddir}/Number-Misc-1.2/LICENSE %{buildroot}/usr/share/package-licenses/perl-Number-Misc/f9b1572533eabd09f84e5dacaca5ec4b9ce26ce7
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -89,7 +100,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/Number::Misc.3
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Number-Misc/f9b1572533eabd09f84e5dacaca5ec4b9ce26ce7
+
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Number/Misc.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Number/Misc.pod
+/usr/lib/perl5/vendor_perl/5.30.1/Number/Misc.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Number/Misc.pod
