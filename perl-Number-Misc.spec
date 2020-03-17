@@ -4,7 +4,7 @@
 #
 Name     : perl-Number-Misc
 Version  : 1.2
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Summary  : 'Number::Misc - handy utilities for numbers'
@@ -106,5 +106,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Number/Misc.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Number/Misc.pod
+/usr/lib/perl5/vendor_perl/5.30.2/Number/Misc.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Number/Misc.pod
