@@ -7,7 +7,7 @@
 #
 Name     : perl-Number-Misc
 Version  : 1.2
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz
 Summary  : 'Number::Misc - handy utilities for numbers'
